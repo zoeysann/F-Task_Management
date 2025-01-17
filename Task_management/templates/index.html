@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="../static/css/styles.css">
+    </head>
+
+    <body>
+        <form style="text-align: center;" action="/add" method="post">
+            <br>
+            <label>Task title:</label>
+            <input type="text" id="title" name="title"><br><br>
+            
+            <label>Description:</label>
+            <input type="text" id="desc" name="desc" size="65"><br><br>
+            
+            <label>Due date:</label>
+            <input type="date" id="date" name="date" ><br><br>
+
+            <label>Status:</label>
+            <input list="status" name="status">
+
+            <datalist id="status">
+                <option value="DONE.">
+                <option value="UNDONE..">
+            </datalist><br><br>
+
+            <!-- <select id="status" name="status">
+                <option value="DONE">Done</option>
+                <option value="UNDONE">Undone</option>
+              </select><br><br> -->
+
+            <input type="submit" value="SUBMIT"><br>
+        </form>
+
+        <!-- <ul>
+            {% for task in tasks %}
+            <h3>{{ task.title }}</h3>
+            <li>
+                Task Description: {{task.description}}<br>
+                Due Date: {{task.date}}<br>
+                Status: {{task.completed}}
+            </li>
+            {% endfor %}
+        </ul> -->
+
+        <ul>
+            {% for task in tasks %}
+            <!-- <strong>{{ task.title }}</strong><br><br> -->
+                <li>
+                    <h3><strong>{{ task.title }}</strong></h3>
+                    Task Description: {{ task.desc }}<br>
+                    Due Date: {{ task.date }}<br>
+                    Status: {{ task.status }}<br><br>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
+
+
+<!-- task input
+    submit button
+
+    tasks lists
+ -->
