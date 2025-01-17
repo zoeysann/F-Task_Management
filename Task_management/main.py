@@ -34,6 +34,7 @@ def add():
 
     return redirect(url_for('home'))
 
+
 # @app.template_filter('dateformat')
 # def dateformat(value):
 #     try:
